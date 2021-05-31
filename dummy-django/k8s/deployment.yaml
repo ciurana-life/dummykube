@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dummy-django-app
+  labels:
+    app: dummy-django
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: dummy-django
+  template:
+    metadata:
+      labels:
+        app: dummy-django
+    spec:
+      containers:
+        - image: dummy-django:latest
+          imagePullPolicy: Never
+          name: dummy-django
+          ports:
+            - containerPort: 8000
+              name: managepy
