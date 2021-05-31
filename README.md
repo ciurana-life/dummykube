@@ -44,6 +44,7 @@ Debugging:
 2. `kubectl describe pod PODNAME`
 3. `kubectl exec -it PODNAME -- bin\bash`, you get a terminal inside the pod (docker).
     - **M1 error, maybe because no specifying --platform on docker**
+    - You can do it from the Docker GUI dashboard, click on pod, then click on CLI (upper right corner)
 
 Deleting:
 1. Deleting by deployment `kubectl delete deployment DEPLOYMENTNAME` (nginx-deply for this example).
